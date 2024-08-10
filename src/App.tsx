@@ -1,14 +1,15 @@
 import NavBar from "./components/NavBar";
-
+import { motion } from "framer-motion";
+import ProyectList from "./components/ProyectList";
 const Home = () => {
   return (
     <>
-      <div className="bg-home text-center flex  flex-col items-center  font-karla">
+      <div className="bg-home ">
         <NavBar></NavBar>
         <section id="sobreMi">
-          <h1 className="text-6xl font-semibold pt-32 text-white ">
+          <motion.h1 className="text-6xl font-semibold pt-32 text-white ">
             Héctor Bruña
-          </h1>
+          </motion.h1>
           <p className="text-s text-pretty pt-8  text-grayText  w-[700px]">
             Vivo en la ciudad de Tandil, Bs. As., Argentina. Mi carrera en la
             programación empezó a los 16 años, cuando mi interés en el mundo de
@@ -26,18 +27,20 @@ const Home = () => {
             <b className="text-white"> UNICEN </b>.
           </p>
         </section>
-        <section id="proyectos" className="text-grayText">
-          <h1 className="text-5xl font-semibold pt-32 text-white ">
-            Proyectos
-          </h1>
-          <article className="py-8">
-            <h2 className="text-3xl">Proyecto 1</h2>
-            <p>Descripción del proyecto 1</p>
-          </article>
-          <article className="py-8">
-            <h2 className="text-3xl">Proyecto 2</h2>
-            <p>Descripción del proyecto 2</p>
-          </article>
+        <ProyectList />
+        <section id="estudios" className="text-white">
+          <h1>Estudios</h1>
+          <ul>
+            <li>Técnico en Informática Personal y Profesional (T.I.P.P.)</li>
+            <li>
+              Tecnicatura Universitaria en Desarrollo de Aplicaciones
+              Informáticas (TUDAI)
+            </li>
+            <li>
+              Unicen - Universidad Nacional del Centro de la Provincia de Buenos
+              Aires (UNICEN)
+            </li>
+          </ul>
         </section>
       </div>
     </>

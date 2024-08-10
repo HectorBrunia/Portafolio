@@ -6,14 +6,20 @@
 @tailwind utilities;
 
 .bg-home {
-  background: rgb(0, 0, 0);
+  @apply text-center flex  flex-col items-center  font-karla;
+  background: #000000;
   background: radial-gradient(circle at top, #2a2a2a, #000000 40%);
   background-attachment: fixed;
 }
+.proyecto {
+  @apply p-8 mt-8 flex gap-8 justify-between;
+  background-color: aliceblue;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(208, 208, 208, 0.2);
+}
 
-.navBar-Link {
-  @apply rounded-full p-1  text-white;
-  background: radial-gradient(circle, #696666, rgb(73, 72, 72) 10%);
-  box-shadow: 0 0 10px #fffcfc;
-  text-shadow: 0 0 10px #fffcfc;
+.img {
+  box-shadow: 0 0 20px rgb(74, 74, 74);
+  width: 300px;
 }
