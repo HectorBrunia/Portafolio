@@ -23,3 +23,9 @@
   box-shadow: 0 0 20px rgb(74, 74, 74);
   width: 300px;
 }
+.selected-proyect {
+  @apply rounded-2xl;
+  margin: 20% 0 0 0;
+  background-color: white;
+  position: fixed;
+}
