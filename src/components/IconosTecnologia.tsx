@@ -1,33 +1,95 @@
-import { FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { DiMongodb } from "react-icons/di";
+import { FaAngular, FaCss3Alt, FaHtml5, FaPhp, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
+import { SiSpringboot } from "react-icons/si";
 
 interface Props {
   tecnoogias: string[];
+  text: boolean;
 }
 
-const IconosTecnologia = ({ tecnoogias }: Props) => {
+const IconosTecnologia = ({ tecnoogias, text }: Props) => {
   let icono;
   return (
     <>
       {tecnoogias.map((tecno) => {
         switch (tecno) {
           case "HTML":
-            icono = <FaHtml5 color="black" size={"30px"} />;
+            icono = (
+              <div>
+                <FaHtml5 size={"30px"} />
+                {text && <p className="text-xs">HTML</p>}
+              </div>
+            );
+
             break;
           case "CSS":
-            icono = <FaCss3Alt color="black" size={"30px"} />;
+            icono = (
+              <div className={text ? "px-4" : ""}>
+                <FaCss3Alt size={"30px"} />
+                {text && <p className="text-xs">CSS</p>}
+              </div>
+            );
             break;
-          case "JSON":
-            icono = <p key={tecno}>JSON</p>;
+          case "Angular":
+            icono = (
+              <div>
+                <FaAngular size={"30px"} />
+                {text && <p className="text-xs">Angular</p>}
+              </div>
+            );
             break;
           case "Javascript":
-            icono = <IoLogoJavascript color="black" size={"30px"} />;
+            icono = (
+              <div>
+                <IoLogoJavascript size={"30px"} />
+                {text && <p className="text-xs">JavaS</p>}
+              </div>
+            );
             break;
           case "React":
-            icono = <p key={tecno}>React</p>;
+            icono = (
+              <div>
+                <FaReact size={"30px"} />
+                {text && <p className="text-xs">React</p>}
+              </div>
+            );
+            break;
+          case "PHP":
+            icono = (
+              <div>
+                <FaPhp size={"30px"} />
+                {text && <p className="text-xs">HTML</p>}
+              </div>
+            );
+            break;
+          case "Spring":
+            icono = (
+              <div>
+                <SiSpringboot size={"30px"} />
+                {text && <p className="text-xs">HTML</p>}
+              </div>
+            );
+            break;
+          case "PostgreSQL":
+            icono = (
+              <div>
+                <BiLogoPostgresql size={"30px"} />
+                {text && <p className="text-xs">HTML</p>}
+              </div>
+            );
+            break;
+          case "MongoDB":
+            icono = (
+              <div>
+                <DiMongodb size={"30px"} />
+                {text && <p className="text-xs">HTML</p>}
+              </div>
+            );
             break;
           default:
-            icono = <div key={tecno}></div>;
+            icono = <div></div>;
             break;
         }
         return icono;

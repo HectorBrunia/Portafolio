@@ -1,35 +1,43 @@
 import { proyecto, proyectos } from "../utils/DataProyectos";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { ImCross } from "react-icons/im";
 import Proyect from "./Proyect";
+import IconosTecnologia from "./IconosTecnologia";
 const initialProyect: proyecto = {
   id: 0,
-  nombre: "Wiki sobre Elden Ring",
-  descripcion: "Proyecto para aprender sobre Elden Ring",
-  img: "https://example.com/wiki.jpg",
-  tecnologias: ["CSS3", "HTML5", "Javascript"],
-  github: "https://github.com/example/wiki-elden-ring",
+  nombre: "",
+  descripcion: "",
+  img: "",
+  tecnologias: [""],
+  github: "",
 };
 const ProyectList = () => {
-  const [selectedId, setSelectedId] = useState(false);
+  const [isSelected, setisSelected] = useState(false);
   const [selectedProyect, setSelectedProyect] = useState(initialProyect);
 
-  console.log(selectedId);
+  console.log(isSelected);
   return (
     <>
+      <motion.h1>Proyectos</motion.h1>
       <motion.section
         id="proyectos"
-        className={selectedId ? "text-grayText opacity-50" : "text-grayText"}
+        className={
+          isSelected
+            ? "text-grayText proyectList opacity-50"
+            : "text-grayText proyectList"
+        }
       >
-        <motion.h1 className="text-5xl font-semibold pt-32 text-white ">
-          Proyectos
-        </motion.h1>
         {proyectos.map((proyecto) => (
           <motion.article
+            whileHover={{
+              scale: 1.2,
+              boxShadow: "0px 0px 30px rgba(255, 254, 254, 1)",
+            }}
             key={proyecto.id}
             className="proyecto"
             onClick={() => {
-              setSelectedId(true);
+              setisSelected(true);
               setSelectedProyect(proyecto);
             }}
             layoutId={proyecto.id.toString()}
@@ -39,20 +47,34 @@ const ProyectList = () => {
         ))}
       </motion.section>
       <AnimatePresence>
-        {selectedId && (
+        {isSelected && (
           <motion.div
             className="selected-proyect"
             layoutId={selectedProyect.id.toString()}
           >
-            <motion.h5>{selectedProyect.nombre}</motion.h5>
-            <motion.h2>{selectedProyect.descripcion}</motion.h2>
-            <motion.img
-              src={selectedProyect.img}
-              className=" img  rounded-xl"
-            />
-            <motion.button onClick={() => setSelectedId(false)}>
-              salir
+            <motion.button
+              whileHover={{ scale: 1.2 }}
+              className="relative left-56"
+              onClick={() => setisSelected(false)}
+            >
+              <ImCross />
             </motion.button>
+            <motion.h5>{selectedProyect.nombre}</motion.h5>
+            <div className="flex gap-2 flex-row mt-4">
+              <motion.img
+                src={selectedProyect.img}
+                className=" img  rounded-xl"
+              />
+              <motion.h2 className="text-grayText text-xs">
+                {selectedProyect.descripcion}
+              </motion.h2>
+            </div>
+            <motion.div className="flex">
+              <IconosTecnologia
+                text={true}
+                tecnoogias={selectedProyect.tecnologias}
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
