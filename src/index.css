@@ -8,8 +8,11 @@
 .bg-home {
   @apply text-center flex  flex-col items-center  font-karla;
   background: #000000;
-  background: radial-gradient(circle at top, #661c1c, #000000 40%);
+  background: radial-gradient(circle at left top, #373636, #000000 40%);
   background-attachment: fixed;
+}
+.textShadow {
+  text-shadow: 0 0 20px rgb(127 29 29);
 }
 
 .textoSimple {
@@ -17,13 +20,13 @@
 }
 
 h1 {
-  @apply text-4xl font-semibold pt-28 text-white;
+  @apply text-4xl font-semibold pt-10 text-white;
 }
 .proyecto {
   @apply mt-8 w-48 h-52 text-sm;
   background-color: transparent;
   border-radius: 10px;
-  box-shadow: 0px 0px 1px rgba(255, 254, 254, 1);
+  border: 1.2px solid rgb(127 29 29);
 }
 
 .img {
@@ -39,7 +42,7 @@ h1 {
 .selected-proyect {
   @apply rounded-2xl p-4 text-white;
   margin: 10% 0 0 0;
-  box-shadow: 0px 0px 20px rgba(255, 254, 254, 0.8);
+  box-shadow: 0px 0px 40px rgba(127, 29, 29, 0.7);
   background-color: rgb(8, 8, 8);
   position: fixed;
   width: 500px;

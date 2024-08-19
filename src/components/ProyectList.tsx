@@ -32,7 +32,7 @@ const ProyectList = () => {
           <motion.article
             whileHover={{
               scale: 1.2,
-              boxShadow: "0px 0px 30px rgba(255, 254, 254, 1)",
+              boxShadow: "0 0 30px rgba(127, 29, 29, 0.7)",
             }}
             key={proyecto.id}
             className="proyecto"

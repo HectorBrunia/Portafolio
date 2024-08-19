@@ -1,8 +1,13 @@
+import { motion } from "framer-motion";
 const Estudios = () => {
   return (
     <section id="estudios" className="text-white max-w-[900px]">
       <h1>Estudios y conocimientos</h1>
-      <article className="flex flex-row p-4 rounded-xl my-12 border border-grayText">
+      <motion.article
+        initial={{ borderRight: "1px solid", borderLeft: "1px solid" }}
+        whileHover={{ border: "1px solid" }}
+        className="flex flex-row p-4 rounded-xl my-12 border-grayText"
+      >
         <div className="text-left">
           <p className="text-xl font-bold">
             Técnico en Informática Personal y Profesional
@@ -21,7 +26,7 @@ const Estudios = () => {
             programación
           </p>
         </div>
-      </article>
+      </motion.article>
       <article className="flex flex-row p-4 rounded-xl my-12 border border-grayText">
         <div className="text-left">
           <p className="text-xl font-bold">

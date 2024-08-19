@@ -24,17 +24,19 @@ const NavBar = () => {
   };
   window.addEventListener("scroll", activeLink);
   const variants = {
-    noselected: {},
+    noselected: {
+      fontSize: "12px",
+    },
     selected: {
       color: "rgb(255 255 255)",
       boxShadow: " 0 0 10px #fffcfc ",
       background: "radial-gradient(circle, #696666, rgb(73, 72, 72) 10%)",
-      fontSize: "12px",
+      fontSize: "14px",
     },
   };
   return (
-    <nav className=" bg-navBar fixed text-grayText  border-lightGray border rounded-full px-6 p-2 mt-3">
-      <ul className="flex flex-row gap-6 text-[10px]">
+    <nav className="z-30 bg-navBar bg-opacity-80 fixed text-grayText  border-lightGray border rounded-full px-6 p-2 mt-3">
+      <ul className="flex flex-row gap-10 ">
         <li>
           <motion.a
             href="#sobreMi"
