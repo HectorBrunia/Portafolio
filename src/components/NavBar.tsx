@@ -30,12 +30,12 @@ const NavBar = () => {
     selected: {
       color: "rgb(255 255 255)",
       boxShadow: " 0 0 10px #fffcfc ",
-      background: "radial-gradient(circle, #696666, rgb(73, 72, 72) 10%)",
+      background: "radial-gradient(circle, #696666, rgb(73, 72, 72) 70%)",
       fontSize: "14px",
     },
   };
   return (
-    <nav className="z-30 bg-navBar bg-opacity-80 fixed text-grayText  border-lightGray border rounded-full px-6 p-2 mt-3">
+    <nav className="z-30 bg-navBar bg-opacity-80 fixed text-grayText  border-red-950 border rounded-full px-6 p-2 mt-3">
       <ul className="flex flex-row gap-10 ">
         <li>
           <motion.a
@@ -43,7 +43,6 @@ const NavBar = () => {
             className={"rounded-full p-1"}
             initial="noselected"
             animate={sobreMi ? "selected" : "noselected"}
-            whileHover={{ color: "white" }}
             transition={{ type: "spring", stiffness: 100, damping: 12 }}
             variants={variants}
           >
@@ -55,7 +54,6 @@ const NavBar = () => {
             href="#proyectos"
             initial="noselected"
             animate={proyecto ? "selected" : "noselected"}
-            whileHover={{ color: "white" }}
             transition={{ type: "spring", stiffness: 100 }}
             variants={variants}
             className={"rounded-full p-1"}
@@ -68,7 +66,6 @@ const NavBar = () => {
             href="#estudios"
             initial="noselected"
             animate={estudios ? "selected" : "noselected"}
-            whileHover={{ color: "white" }}
             transition={{ type: "spring", stiffness: 100 }}
             variants={variants}
             className={"rounded-full p-1"}

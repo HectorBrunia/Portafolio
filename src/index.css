@@ -51,3 +51,35 @@ h1 {
 .proyectList {
   @apply flex flex-row justify-between w-[900px];
 }
+.estudio {
+  @apply flex flex-row rounded-xl pl-4 pt-4 mb-10;
+  position: relative;
+}
+.estudio:before {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(127, 29, 29);
+  transition: all 0.3s;
+}
+.estudio:after {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  content: "";
+  display: block;
+  width: 3px;
+  height: 30px;
+  background-color: rgb(127, 29, 29);
+  transition: all 0.3s;
+}
+.estudio:hover:before {
+  width: 100%;
+}
+.estudio:hover:after {
+  height: 90%;
+}
