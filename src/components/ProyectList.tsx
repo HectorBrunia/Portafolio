@@ -15,12 +15,13 @@ const initialProyect: proyecto = {
 const ProyectList = () => {
   const [isSelected, setisSelected] = useState(false);
   const [selectedProyect, setSelectedProyect] = useState(initialProyect);
-
-  console.log(isSelected);
   return (
     <>
       <motion.h1>Proyectos</motion.h1>
       <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         id="proyectos"
         className={
           isSelected

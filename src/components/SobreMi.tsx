@@ -3,6 +3,7 @@ import {
   BiLogoMongodb,
   BiLogoPostgresql,
   BiLogoSpringBoot,
+  BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
 import {
@@ -14,11 +15,17 @@ import {
   FaHtml5,
   FaAngular,
 } from "react-icons/fa6";
+import { motion } from "framer-motion";
 const SobreMi = () => {
   return (
-    <section id="descripcion" className=" text-white">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      id="descripcion"
+      className=" text-white"
+    >
       <h1>Sobre mi</h1>
-      <p className="textoSimple mt-12">
+      <p className="textoSimple mt-12 w-[900px]">
         Vivo en la ciudad de Tandil, Bs. As., Argentina. Mi carrera en la
         programación empezó a los 16 años, cuando mi interés en el mundo de los
         videojuegos y la informática en general me llevó a elegir la
@@ -34,22 +41,91 @@ const SobreMi = () => {
         Centro de la Provincia de Buenos Aires{" "}
         <b className="text-white"> UNICEN </b>.
       </p>
-      <h2 className="text-2xl py-10">Mis avilidades</h2>
-      <div className="grid grid-cols-4 gap-4 items-center justify-center  ">
-        <FaReact size={80} className="hover:scale-150 " color="#74C0FC" />
-        <FaJava size={80} />
-        <FaJs size={80} color="yellow" />
-        <FaPhp size={80} />
-        <FaCss3Alt size={80} color="#0784e4" />
-        <FaHtml5 size={80} color="#F16529" />
-        <BiLogoTypescript size={100} color="#1f7bc1" />
-        <BiLogoPostgresql size={100} />
-        <BiLogoMongodb size={100} color="green" />
-        <BiLogoSpringBoot size={100} color="green" />
-        <FaAngular size={80} color="#DD235B" />
-        <BiLogoFlutter size={80} color="#74C0FC" />
+      <h2 className="text-4xl py-10">Mis avilidades</h2>
+      <div className=" tecnologias  ">
+        <p className="">Lenguajes de programacion</p>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <FaJava size={50} color="white" />
+          <p className="iconP">JAVA</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <FaJs size={50} color="yellow" />
+          <p className="iconP">JAVASCRIPT</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <FaPhp size={50} />
+          <p className="iconP">PHP</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <BiLogoTypescript
+            size={60}
+            color="#1f7bc1"
+            className=" icono absolute bottom-6 "
+          />
+          <p className="iconP">TYPESCRIPT</p>
+        </motion.div>
       </div>
-    </section>
+      <div className="tecnologias ">
+        <p>tecnologias Frontend</p>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <FaReact size={50} color="#74C0FC" />
+          <p className="iconP">REACT</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <FaAngular size={50} color="#DD235B" />
+          <p className="iconP">ANGULAR</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <FaCss3Alt size={50} color="#0784e4" />
+          <p className="iconP">CSS</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <FaHtml5 size={50} color="#F16529" />
+          <p className="iconP">HTML</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <BiLogoTailwindCss
+            size={60}
+            color="#1f7bc1"
+            className=" absolute bottom-6"
+          />
+          <p className="iconP">TAILWIND</p>
+        </motion.div>
+      </div>
+      <div className="tecnologias ">
+        <p>Frameworks Backend</p>
+        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
+          <BiLogoSpringBoot
+            size={60}
+            color="green"
+            className=" absolute bottom-6"
+          />
+          <p className="iconP">SPRINGBOOT</p>
+        </motion.div>
+      </div>
+      <div className="tecnologias ">
+        <p>Bases de datos</p>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <BiLogoPostgresql size={60} className=" absolute bottom-6" />
+          <p className="iconP">POSTGRESQL</p>
+        </motion.div>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <BiLogoMongodb
+            size={60}
+            color="green"
+            className=" absolute bottom-6"
+          />
+          <p className="iconP">MONGODB</p>
+        </motion.div>
+      </div>
+      <div className="tecnologias  ">
+        <p>Frameworks Aplicaciones</p>
+        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+          <BiLogoFlutter size={50} color="#74C0FC" />
+          <p className="iconP">FLUTTER</p>
+        </motion.div>
+      </div>
+    </motion.section>
   );
 };
 

@@ -16,7 +16,7 @@
 }
 
 .textoSimple {
-  @apply text-pretty  text-grayText  w-[700px];
+  @apply text-pretty  text-grayText;
 }
 
 h1 {
@@ -82,4 +82,53 @@ h1 {
 }
 .estudio:hover:after {
   height: 90%;
+}
+
+.tecnologias {
+  @apply max-sm:grid-cols-3 max-sm:w-[300px] border-b-[1px] border-red-950 grid grid-cols-6 pt-4  items-center justify-center w-[900px];
+}
+.tecnologias p {
+  @apply max-sm:col-span-3;
+}
+.icon {
+  @apply overflow-hidden w-20 h-20 relative text-center flex flex-col items-center;
+}
+.iconP {
+  @apply text-xs;
+  position: absolute;
+  top: 110px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.icon:hover .iconP {
+  top: 50px;
+  opacity: 1;
+}
+.disponible {
+  @apply relative px-16 border-red-950 border-2 py-2  mt-8 rounded-full;
+}
+.disponible:before {
+  position: absolute;
+  border-radius: 50%;
+  top: 10px;
+  left: 20px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(76, 233, 55);
+  animation: boxshadow 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@keyframes boxshadow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(76, 233, 55, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(76, 233, 55, 1);
+    transform: scale(1.1);
+  }
 }
