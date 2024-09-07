@@ -35,24 +35,17 @@ h1 {
   height: 100px;
 }
 .selected-proyect .img {
-  @apply mb-4 rounded-xl;
-  width: 250px;
-  height: 160px;
+  @apply w-[350px] h-[200px] rounded-xl lg:w-[400px] lg:h-[300px];
 }
 .selected-proyect {
-  @apply rounded-2xl p-4 text-white;
-  margin: 10% 0 0 0;
+  @apply flex lg:flex-row flex-col items-center lg:items-start rounded-2xl pt-8 text-white w-[70%] lg:w-[800px] fixed h-[50%];
+  margin: 200px 0 0 0;
   box-shadow: 0px 0px 40px rgba(127, 29, 29, 0.7);
   background-color: rgb(8, 8, 8);
-  position: fixed;
-  width: 500px;
-  height: 300px;
 }
-.proyectList {
-  @apply flex flex-row justify-between w-[900px];
-}
+
 .estudio {
-  @apply flex flex-row rounded-xl pl-4 pt-4 mb-10;
+  @apply xl:flex xl:flex-row rounded-xl pl-4 pt-4 mb-10;
   position: relative;
 }
 .estudio:before {
@@ -85,10 +78,10 @@ h1 {
 }
 
 .tecnologias {
-  @apply max-sm:grid-cols-3 max-sm:w-[300px] border-b-[1px] border-red-950 grid grid-cols-6 pt-4  items-center justify-center w-[900px];
+  @apply lg:w-[900px] w-[400px] grid-cols-3 border-b-[1px] border-red-950 grid lg:grid-cols-6 pt-4  items-center justify-center;
 }
 .tecnologias p {
-  @apply max-sm:col-span-3;
+  @apply col-span-3 lg:col-span-1;
 }
 .icon {
   @apply overflow-hidden w-20 h-20 relative text-center flex flex-col items-center;

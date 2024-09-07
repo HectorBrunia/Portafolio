@@ -19,13 +19,11 @@ import { motion } from "framer-motion";
 const SobreMi = () => {
   return (
     <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
       id="descripcion"
-      className=" text-white"
+      className=" text-white flex flex-col items-center"
     >
       <h1>Sobre mi</h1>
-      <p className="textoSimple mt-12 w-[900px]">
+      <p className="textoSimple mt-12 lg:w-[900px] ">
         Vivo en la ciudad de Tandil, Bs. As., Argentina. Mi carrera en la
         programación empezó a los 16 años, cuando mi interés en el mundo de los
         videojuegos y la informática en general me llevó a elegir la
@@ -43,7 +41,7 @@ const SobreMi = () => {
       </p>
       <h2 className="text-4xl py-10">Mis avilidades</h2>
       <div className=" tecnologias  ">
-        <p className="">Lenguajes de programacion</p>
+        <p>Lenguajes de programacion</p>
         <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
           <FaJava size={50} color="white" />
           <p className="iconP">JAVA</p>
@@ -65,9 +63,9 @@ const SobreMi = () => {
           <p className="iconP">TYPESCRIPT</p>
         </motion.div>
       </div>
-      <div className="tecnologias ">
+      <div className="tecnologias">
         <p>tecnologias Frontend</p>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
+        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
           <FaReact size={50} color="#74C0FC" />
           <p className="iconP">REACT</p>
         </motion.div>
@@ -106,15 +104,11 @@ const SobreMi = () => {
       <div className="tecnologias ">
         <p>Bases de datos</p>
         <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoPostgresql size={60} className=" absolute bottom-6" />
+          <BiLogoPostgresql size={60} className=" " />
           <p className="iconP">POSTGRESQL</p>
         </motion.div>
         <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoMongodb
-            size={60}
-            color="green"
-            className=" absolute bottom-6"
-          />
+          <BiLogoMongodb size={60} color="green" className=" " />
           <p className="iconP">MONGODB</p>
         </motion.div>
       </div>

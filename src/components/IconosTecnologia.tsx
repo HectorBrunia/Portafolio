@@ -1,4 +1,8 @@
-import { BiLogoPostgresql } from "react-icons/bi";
+import {
+  BiLogoPostgresql,
+  BiLogoTailwindCss,
+  BiLogoTypescript,
+} from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
 import { FaAngular, FaCss3Alt, FaHtml5, FaPhp, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -18,7 +22,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
           case "HTML":
             icono = (
               <div>
-                <FaHtml5 size={"30px"} />
+                <FaHtml5 color="#F16529" size={"30px"} />
                 {text && <p className="text-xs">HTML</p>}
               </div>
             );
@@ -27,7 +31,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
           case "CSS":
             icono = (
               <div className={text ? "px-4" : ""}>
-                <FaCss3Alt size={"30px"} />
+                <FaCss3Alt color="#0784e4" size={"30px"} />
                 {text && <p className="text-xs">CSS</p>}
               </div>
             );
@@ -35,7 +39,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
           case "Angular":
             icono = (
               <div>
-                <FaAngular size={"30px"} />
+                <FaAngular color="#DD235B" size={"30px"} />
                 {text && <p className="text-xs">Angular</p>}
               </div>
             );
@@ -43,7 +47,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
           case "Javascript":
             icono = (
               <div>
-                <IoLogoJavascript size={"30px"} />
+                <IoLogoJavascript color="yellow" size={"30px"} />
                 {text && <p className="text-xs">JavaS</p>}
               </div>
             );
@@ -51,7 +55,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
           case "React":
             icono = (
               <div>
-                <FaReact size={"30px"} />
+                <FaReact color="#74C0FC" size={"30px"} />
                 {text && <p className="text-xs">React</p>}
               </div>
             );
@@ -60,15 +64,15 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             icono = (
               <div>
                 <FaPhp size={"30px"} />
-                {text && <p className="text-xs">HTML</p>}
+                {text && <p className="text-xs">PHP</p>}
               </div>
             );
             break;
           case "Spring":
             icono = (
               <div>
-                <SiSpringboot size={"30px"} />
-                {text && <p className="text-xs">HTML</p>}
+                <SiSpringboot color="green" size={"30px"} />
+                {text && <p className="text-xs">Spring</p>}
               </div>
             );
             break;
@@ -76,20 +80,49 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             icono = (
               <div>
                 <BiLogoPostgresql size={"30px"} />
-                {text && <p className="text-xs">HTML</p>}
+                {text && <p className="text-xs">PostgreSQL</p>}
               </div>
             );
             break;
           case "MongoDB":
             icono = (
               <div>
-                <DiMongodb size={"30px"} />
-                {text && <p className="text-xs">HTML</p>}
+                <DiMongodb color="green" size={"30px"} />
+                {text && <p className="text-xs">MongoDB</p>}
+              </div>
+            );
+            break;
+          case "Typescript":
+            icono = (
+              <div>
+                <BiLogoTypescript
+                  size={"30px"}
+                  color="#1f7bc1"
+                  className=" icono absolute bottom-6 "
+                />
+                {text && <p className="text-xs">Typescript</p>}
+              </div>
+            );
+            break;
+          case "Tailwind":
+            icono = (
+              <div>
+                <BiLogoTailwindCss
+                  size={60}
+                  color="#1f7bc1"
+                  className=" absolute bottom-6"
+                />
+                {text && <p className="text-xs">Tailwind</p>}
               </div>
             );
             break;
           default:
-            icono = <div></div>;
+            icono = (
+              <div>
+                {" "}
+                <p>tecnologia no reconocida</p>
+              </div>
+            );
             break;
         }
         return icono;

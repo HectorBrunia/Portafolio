@@ -25,8 +25,8 @@ const ProyectList = () => {
         id="proyectos"
         className={
           isSelected
-            ? "text-grayText proyectList opacity-50"
-            : "text-grayText proyectList"
+            ? "text-grayText lg:flex lg:flex-row lg:justify-between lg:w-[900px] opacity-50"
+            : "text-grayText lg:flex lg:flex-row lg:justify-between lg:w-[900px]"
         }
       >
         {proyectos.map((proyecto) => (
@@ -47,6 +47,7 @@ const ProyectList = () => {
           </motion.article>
         ))}
       </motion.section>
+
       <AnimatePresence>
         {isSelected && (
           <motion.div
@@ -55,27 +56,32 @@ const ProyectList = () => {
           >
             <motion.button
               whileHover={{ scale: 1.2 }}
-              className="relative left-56"
+              className="relative left-[45%] bottom-6 lg:left-[94%] "
               onClick={() => setisSelected(false)}
             >
               <ImCross />
             </motion.button>
-            <motion.h5>{selectedProyect.nombre}</motion.h5>
-            <div className="flex gap-2 flex-row mt-4">
+            <div>
               <motion.img
                 src={selectedProyect.img}
                 className=" img  rounded-xl"
               />
+              <motion.div className="flex">
+                <IconosTecnologia
+                  text={true}
+                  tecnoogias={selectedProyect.tecnologias}
+                />
+              </motion.div>
+            </div>
+
+            <div className="px-2">
+              <motion.h2 className="text-2xl">
+                {selectedProyect.nombre}
+              </motion.h2>
               <motion.h2 className="text-grayText text-xs">
                 {selectedProyect.descripcion}
               </motion.h2>
             </div>
-            <motion.div className="flex">
-              <IconosTecnologia
-                text={true}
-                tecnoogias={selectedProyect.tecnologias}
-              />
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

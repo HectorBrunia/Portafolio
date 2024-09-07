@@ -22,17 +22,17 @@ const Home = () => {
         <NavBar></NavBar>
         <section id="sobreMi">
           <div className="flex flex-col  text-white mt-28 items-center justify-center">
-            <motion.h1 className="text-5xl p-8">Héctor Bruña</motion.h1>
+            <motion.h1 className="text-4xl p-8">Héctor Bruña</motion.h1>
             <motion.h1
               variants={icon}
               initial="hidden"
               animate="visible"
               transition={{ duration: 3 }}
-              className="text-6xl font-bold p-8 text-red-900"
+              className="text-5xl font-bold text-red-900"
             >
               Desarrollador <br></br> Full-Stack
             </motion.h1>
-            <div className="flex gap-8 mt-8 p-8 items-center justify-center">
+            <div className="flex gap-8 mt-8 py-8 items-center justify-center">
               <motion.a
                 className="flex items-center flex-col"
                 whileHover={{ scale: 1.2, color: "rgb(127 29 29 )" }}
