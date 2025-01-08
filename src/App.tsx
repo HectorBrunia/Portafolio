@@ -18,24 +18,41 @@ const icon = {
 const Home = () => {
   return (
     <>
-      <div className="bg-home">
+      <div className="bg-home relative">
         <NavBar></NavBar>
         <section id="sobreMi">
           <div className="flex flex-col  text-white mt-28 items-center justify-center">
-            <motion.h1 className="text-4xl p-8">Héctor Bruña</motion.h1>
+            <motion.h1
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="text-5xl p-6"
+            >
+              Héctor Bruña
+            </motion.h1>
             <motion.h1
               variants={icon}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 3 }}
-              className="text-5xl font-bold text-red-900"
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1.5 }}
+              className="text-4xl font-bold text-red-900"
             >
               Desarrollador <br></br> Full-Stack
             </motion.h1>
-            <div className="flex gap-8 mt-8 py-8 items-center justify-center">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="flex gap-8 mt-8 py-8 items-center justify-center"
+            >
               <motion.a
+                whileHover={{
+                  scale: 1.2,
+                  color: "rgb(127 29 29 )",
+                  y: -10,
+                }}
                 className="flex items-center flex-col"
-                whileHover={{ scale: 1.2, color: "rgb(127 29 29 )" }}
                 target="_blank"
                 href="https://github.com/HectorBrunia"
               >
@@ -43,7 +60,11 @@ const Home = () => {
                 <p>GitHub</p>
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.2, color: "rgb(127 29 29 )" }}
+                whileHover={{
+                  scale: 1.2,
+                  color: "rgb(127 29 29 )",
+                  y: -10,
+                }}
                 className="flex items-center flex-col"
                 target="_blank"
                 href="https://www.linkedin.com/in/h%C3%A9ctor-bru%C3%B1a/"
@@ -52,7 +73,11 @@ const Home = () => {
                 <p>LinkedIn</p>
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.2, color: "rgb(127 29 29 )" }}
+                whileHover={{
+                  scale: 1.2,
+                  color: "rgb(127 29 29 )",
+                  y: -10,
+                }}
                 className="flex items-center flex-col"
                 target="_blank"
                 href="mailto:hectorbct.2002@gmail.com"
@@ -61,7 +86,11 @@ const Home = () => {
                 <p>Email</p>
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.2, color: "rgb(127 29 29 )" }}
+                whileHover={{
+                  scale: 1.2,
+                  color: "rgb(127 29 29 )",
+                  y: -10,
+                }}
                 className="flex items-center flex-col"
                 target="_blank"
                 href="pdf/HectorBruña.pdf"
@@ -70,7 +99,7 @@ const Home = () => {
                 <FaDownload size={40} />
                 <p>Descargar CV</p>
               </motion.a>
-            </div>
+            </motion.div>
           </div>
         </section>
         <div className="disponible ">

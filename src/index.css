@@ -5,11 +5,38 @@
 @tailwind components;
 @tailwind utilities;
 
+#tsparticles {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1 !important;
+  pointer-events: none;
+}
 .bg-home {
-  @apply text-center flex  flex-col items-center  font-karla;
-  background: #000000;
-  background: radial-gradient(circle at left top, #373636, #000000 40%);
+  @apply text-center flex flex-col items-center font-karla;
+  background: radial-gradient(circle, #373636, #000000 40%);
+  background-size: 200% 200%;
   background-attachment: fixed;
+  animation: gradientBG 14s linear infinite;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 100%;
+  }
+  25% {
+    background-position: 50% 120%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 120%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
 }
 .textShadow {
   text-shadow: 0 0 20px rgb(127 29 29);
@@ -23,25 +50,23 @@ h1 {
   @apply text-4xl font-semibold pt-10 text-white;
 }
 .proyecto {
-  @apply mt-8 w-48 h-52 text-sm;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 1.2px solid rgb(127 29 29);
+  @apply mt-8 text-xl;
 }
 
 .img {
-  @apply mb-4 rounded-xl;
-  width: 224px;
-  height: 100px;
+  @apply rounded-3xl;
+
+  background: rgb(125, 34, 34);
+  background: linear-gradient(
+    150deg,
+    rgba(125, 34, 34, 1) 0%,
+    rgba(0, 0, 0, 1) 70%
+  );
+  box-shadow: 0 0 10px rgb(192, 184, 184);
 }
-.selected-proyect .img {
-  @apply w-[350px] h-[200px] rounded-xl lg:w-[400px] lg:h-[300px];
-}
-.selected-proyect {
-  @apply flex lg:flex-row flex-col items-center lg:items-start rounded-2xl pt-8 text-white w-[70%] lg:w-[800px] fixed h-[50%];
-  margin: 200px 0 0 0;
-  box-shadow: 0px 0px 40px rgba(127, 29, 29, 0.7);
-  background-color: rgb(8, 8, 8);
+
+.bg-resaltado {
+  background-color: rgba(127, 29, 29, 0.7);
 }
 
 .estudio {
@@ -108,8 +133,8 @@ h1 {
   left: 20px;
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: rgb(76, 233, 55);
   animation: boxshadow 3s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
 }
@@ -122,6 +147,6 @@ h1 {
   }
   50% {
     box-shadow: 0 0 20px rgba(76, 233, 55, 1);
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }

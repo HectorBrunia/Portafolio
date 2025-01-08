@@ -4,7 +4,14 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
-import { FaAngular, FaCss3Alt, FaHtml5, FaPhp, FaReact } from "react-icons/fa";
+import {
+  FaAngular,
+  FaCss3Alt,
+  FaHtml5,
+  FaNodeJs,
+  FaPhp,
+  FaReact,
+} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiSpringboot } from "react-icons/si";
 
@@ -21,7 +28,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
         switch (tecno) {
           case "HTML":
             icono = (
-              <div>
+              <div className="px-4 flex flex-col items-center">
                 <FaHtml5 color="#F16529" size={"30px"} />
                 {text && <p className="text-xs">HTML</p>}
               </div>
@@ -30,7 +37,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "CSS":
             icono = (
-              <div className={text ? "px-4" : ""}>
+              <div className="px-4 flex flex-col items-center">
                 <FaCss3Alt color="#0784e4" size={"30px"} />
                 {text && <p className="text-xs">CSS</p>}
               </div>
@@ -38,7 +45,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Angular":
             icono = (
-              <div>
+              <div className="px-4 flex flex-col items-center">
                 <FaAngular color="#DD235B" size={"30px"} />
                 {text && <p className="text-xs">Angular</p>}
               </div>
@@ -46,7 +53,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Javascript":
             icono = (
-              <div>
+              <div className="px-4 flex flex-col items-center">
                 <IoLogoJavascript color="yellow" size={"30px"} />
                 {text && <p className="text-xs">JavaS</p>}
               </div>
@@ -54,7 +61,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "React":
             icono = (
-              <div>
+              <div className="px-4 flex flex-col items-center">
                 <FaReact color="#74C0FC" size={"30px"} />
                 {text && <p className="text-xs">React</p>}
               </div>
@@ -62,7 +69,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "PHP":
             icono = (
-              <div>
+              <div className="px-4 flex flex-col items-center">
                 <FaPhp size={"30px"} />
                 {text && <p className="text-xs">PHP</p>}
               </div>
@@ -70,15 +77,15 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Spring":
             icono = (
-              <div>
-                <SiSpringboot color="green" size={"30px"} />
+              <div className="px-4 flex flex-col items-center">
+                <SiSpringboot color="green" size={30} />
                 {text && <p className="text-xs">Spring</p>}
               </div>
             );
             break;
           case "PostgreSQL":
             icono = (
-              <div>
+              <div className="px-4 flex flex-col items-center">
                 <BiLogoPostgresql size={"30px"} />
                 {text && <p className="text-xs">PostgreSQL</p>}
               </div>
@@ -86,7 +93,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "MongoDB":
             icono = (
-              <div>
+              <div className="px-4 flex flex-col items-center">
                 <DiMongodb color="green" size={"30px"} />
                 {text && <p className="text-xs">MongoDB</p>}
               </div>
@@ -94,25 +101,25 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Typescript":
             icono = (
-              <div>
-                <BiLogoTypescript
-                  size={"30px"}
-                  color="#1f7bc1"
-                  className=" icono absolute bottom-6 "
-                />
+              <div className="px-4 flex flex-col items-center">
+                <BiLogoTypescript size={30} color="#1f7bc1" className="" />
                 {text && <p className="text-xs">Typescript</p>}
               </div>
             );
             break;
           case "Tailwind":
             icono = (
-              <div>
-                <BiLogoTailwindCss
-                  size={60}
-                  color="#1f7bc1"
-                  className=" absolute bottom-6"
-                />
+              <div className="px-4 flex flex-col items-center">
+                <BiLogoTailwindCss size={30} color="#1f7bc1" />
                 {text && <p className="text-xs">Tailwind</p>}
+              </div>
+            );
+            break;
+          case "Nodejs":
+            icono = (
+              <div className="px-4 flex flex-col items-center">
+                <FaNodeJs size={30} color="green" />
+                {text && <p className="text-xs">NodeJS</p>}
               </div>
             );
             break;

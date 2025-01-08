@@ -14,6 +14,7 @@ import {
   FaCss3Alt,
   FaHtml5,
   FaAngular,
+  FaNodeJs,
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
 const SobreMi = () => {
@@ -99,6 +100,10 @@ const SobreMi = () => {
             className=" absolute bottom-6"
           />
           <p className="iconP">SPRINGBOOT</p>
+        </motion.div>
+        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
+          <FaNodeJs size={57} color="green" className=" absolute bottom-6" />
+          <p className="iconP">NODEJS</p>
         </motion.div>
       </div>
       <div className="tecnologias ">
