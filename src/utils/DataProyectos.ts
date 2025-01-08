@@ -23,7 +23,7 @@ export const proyectos = [
     descripcion:
       "Pagina web de juegos utilizando HTML, CSS y Javascript. La pagina cuenta con un slider de imagenes, un menu de navegacion, un catalogo de juegos. Ademas implemente el juego de 4 en lineas",
     tecnologias: ["HTML", "CSS", "Javascript"],
-    github: "https://hectorbrunia.github.io/InterfacesTP/TP-3/index.html",
+    github: "https://github.com/HectorBrunia/InterfacesTP/tree/master/TP-3",
     link: "https://hectorbrunia.github.io/InterfacesTP/TP-3/index.html",
   },
   {
@@ -33,8 +33,9 @@ export const proyectos = [
     descripcion:
       "Pagina web de venta de celulares utilizando angular con typescript y utilizando una api (MockAPI) para obtener los datos de los celulares.",
     tecnologias: ["Angular", "Typescript"],
-    github: "https://github.com/games-page",
-    link: "https://hectorbrunia.github.io/InterfacesTP/TP-3/index.html",
+    github:
+      "https://stackblitz.com/edit/angular-ivy-yzmvuo?authuser=1&file=src%2Fapp%2Fphone-data.service.ts",
+    link: "https://github.com/HectorBrunia/Angular",
   },
   {
     id: 3,
@@ -58,7 +59,7 @@ export const proyectos = [
       "Javascript",
       "Nodejs",
     ],
-    github: "https://github.com/portfolio-web",
-    link: "https://hectorbrunia.github.io/InterfacesTP/TP-3/index.html",
+    github: "https://github.com/Sergio-Dannunzio/Tranquiliza360-PPS",
+    link: "https://www.tranquiliza360.com.ar/",
   },
 ];

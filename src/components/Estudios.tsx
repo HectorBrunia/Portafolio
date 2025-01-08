@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 const Estudios = () => {
   return (
-    <section id="estudios" className="text-white max-w-[925px]">
+    <>
       <h1>Estudios y conocimientos</h1>
       <motion.article className=" estudio ">
         <div className="xl:text-left">
@@ -44,7 +44,7 @@ const Estudios = () => {
           </p>
         </div>
       </motion.article>
-    </section>
+    </>
   );
 };
 

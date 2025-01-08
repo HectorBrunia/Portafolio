@@ -96,7 +96,7 @@ h1 {
   transition: all 0.3s;
 }
 .estudio:hover:before {
-  width: 100%;
+  width: 98%;
 }
 .estudio:hover:after {
   height: 90%;
@@ -124,7 +124,7 @@ h1 {
   opacity: 1;
 }
 .disponible {
-  @apply relative px-16 border-red-950 border-2 py-2  mt-8 rounded-full;
+  @apply relative w-52  px-16 border-red-950 border-2 py-2 m-auto rounded-full;
 }
 .disponible:before {
   position: absolute;

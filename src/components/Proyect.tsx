@@ -12,7 +12,7 @@ const Proyect = ({ proyecto }: Props) => {
   return (
     <>
       <motion.div className="flex flex-col items-center space-y-4">
-        <div className="img flex flex-col items-center gap-1 p-5">
+        <div className="img flex flex-col items-center gap-1 ">
           <div className="flex gap-1 justify-center items-center">
             <button
               disabled={imgIndex === 0}
@@ -24,7 +24,7 @@ const Proyect = ({ proyecto }: Props) => {
             <motion.img
               src={proyecto.img[imgIndex]}
               alt={`Imagen ${imgIndex + 1}`}
-              className="w-[90%] p-4"
+              className="lg:w-[90%] w-[80%] p-1 lg:p-4"
             />
             <button
               disabled={imgIndex === proyecto.img.length - 1}
@@ -47,12 +47,12 @@ const Proyect = ({ proyecto }: Props) => {
           </div>
         </div>
 
-        <motion.div className="w-full  space-y-4 text-left">
+        <motion.div className="w-full p-4  space-y-4 text-left">
           <motion.h2 className="text-3xl font-bold text-gray-100">
             {proyecto.nombre}
           </motion.h2>
           <motion.p className="text-white">{proyecto.descripcion}</motion.p>
-          <div className="flex justify-center gap-4 items-center text-white">
+          <div className="flex justify-center lg:gap-4 items-center text-white">
             <IconosTecnologia text={true} tecnoogias={proyecto.tecnologias} />
           </div>
           <div className="flex justify-center gap-4">

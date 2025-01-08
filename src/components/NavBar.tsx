@@ -1,28 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 const NavBar = () => {
-  const [sobreMi, setSobreMi] = useState(true);
-  const [proyecto, setProyecto] = useState(false);
-  const [estudios, setEstudios] = useState(false);
+  const [activeSection, setActiveSection] = useState("sobreMi");
 
-  const activeLink = () => {
-    if (window.scrollY >= 0 && window.scrollY <= 100) {
-      setSobreMi(true);
-    } else {
-      setSobreMi(false);
-    }
-    if (window.scrollY >= 101 && window.scrollY <= 500) {
-      setProyecto(true);
-    } else {
-      setProyecto(false);
-    }
-    if (window.scrollY >= 501 && window.scrollY <= 800) {
-      setEstudios(true);
-    } else {
-      setEstudios(false);
-    }
-  };
-  window.addEventListener("scroll", activeLink);
+  useEffect(() => {
+    const sections = document.querySelectorAll("section"); // Selecciona todas las secciones
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id); // Actualiza la sección activa al intersectarse
+          }
+        });
+      },
+      { threshold: 0.3 } // Ajusta el porcentaje de visibilidad requerido
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect(); // Limpia el observer al desmontar
+  }, []);
+
   const variants = {
     noselected: {
       fontSize: "12px",
@@ -42,7 +40,7 @@ const NavBar = () => {
             href="#sobreMi"
             className={"rounded-full p-1"}
             initial="noselected"
-            animate={sobreMi ? "selected" : "noselected"}
+            animate={activeSection === "sobreMi" ? "selected" : "noselected"}
             transition={{ type: "spring", stiffness: 100, damping: 12 }}
             variants={variants}
           >
@@ -53,7 +51,7 @@ const NavBar = () => {
           <motion.a
             href="#proyectos"
             initial="noselected"
-            animate={proyecto ? "selected" : "noselected"}
+            animate={activeSection === "proyectos" ? "selected" : "noselected"}
             transition={{ type: "spring", stiffness: 100 }}
             variants={variants}
             className={"rounded-full p-1"}
@@ -65,7 +63,7 @@ const NavBar = () => {
           <motion.a
             href="#estudios"
             initial="noselected"
-            animate={estudios ? "selected" : "noselected"}
+            animate={activeSection === "estudios" ? "selected" : "noselected"}
             transition={{ type: "spring", stiffness: 100 }}
             variants={variants}
             className={"rounded-full p-1"}

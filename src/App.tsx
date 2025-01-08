@@ -26,7 +26,7 @@ const Home = () => {
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
-              className="text-5xl p-6"
+              className="text-5xl p-6 "
             >
               Héctor Bruña
             </motion.h1>
@@ -101,13 +101,17 @@ const Home = () => {
               </motion.a>
             </motion.div>
           </div>
+          <div className="disponible">
+            <p className="text-white font-karla font-bold ">DISPONIBLE</p>
+          </div>
+          <SobreMi />
         </section>
-        <div className="disponible ">
-          <p className="text-white font-karla font-bold ">DISPONIBLE</p>
-        </div>
-        <SobreMi />
-        <ProyectList />
-        <Estudios />
+        <section id="proyectos">
+          <ProyectList />
+        </section>
+        <section id="estudios" className="text-white max-w-[925px]">
+          <Estudios />
+        </section>
       </div>
     </>
   );

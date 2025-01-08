@@ -24,11 +24,14 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
   let icono;
   return (
     <>
-      {tecnoogias.map((tecno) => {
+      {tecnoogias.map((tecno, index) => {
         switch (tecno) {
           case "HTML":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <FaHtml5 color="#F16529" size={"30px"} />
                 {text && <p className="text-xs">HTML</p>}
               </div>
@@ -37,7 +40,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "CSS":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <FaCss3Alt color="#0784e4" size={"30px"} />
                 {text && <p className="text-xs">CSS</p>}
               </div>
@@ -45,7 +51,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Angular":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <FaAngular color="#DD235B" size={"30px"} />
                 {text && <p className="text-xs">Angular</p>}
               </div>
@@ -53,7 +62,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Javascript":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <IoLogoJavascript color="yellow" size={"30px"} />
                 {text && <p className="text-xs">JavaS</p>}
               </div>
@@ -61,7 +73,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "React":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <FaReact color="#74C0FC" size={"30px"} />
                 {text && <p className="text-xs">React</p>}
               </div>
@@ -69,7 +84,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "PHP":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <FaPhp size={"30px"} />
                 {text && <p className="text-xs">PHP</p>}
               </div>
@@ -77,7 +95,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Spring":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <SiSpringboot color="green" size={30} />
                 {text && <p className="text-xs">Spring</p>}
               </div>
@@ -85,7 +106,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "PostgreSQL":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <BiLogoPostgresql size={"30px"} />
                 {text && <p className="text-xs">PostgreSQL</p>}
               </div>
@@ -93,7 +117,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "MongoDB":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <DiMongodb color="green" size={"30px"} />
                 {text && <p className="text-xs">MongoDB</p>}
               </div>
@@ -101,7 +128,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Typescript":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <BiLogoTypescript size={30} color="#1f7bc1" className="" />
                 {text && <p className="text-xs">Typescript</p>}
               </div>
@@ -109,7 +139,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Tailwind":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <BiLogoTailwindCss size={30} color="#1f7bc1" />
                 {text && <p className="text-xs">Tailwind</p>}
               </div>
@@ -117,7 +150,10 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           case "Nodejs":
             icono = (
-              <div className="px-4 flex flex-col items-center">
+              <div
+                key={index}
+                className="lg:px-4 px-2 flex flex-col items-center"
+              >
                 <FaNodeJs size={30} color="green" />
                 {text && <p className="text-xs">NodeJS</p>}
               </div>
@@ -125,7 +161,7 @@ const IconosTecnologia = ({ tecnoogias, text }: Props) => {
             break;
           default:
             icono = (
-              <div>
+              <div key={index}>
                 {" "}
                 <p>tecnologia no reconocida</p>
               </div>

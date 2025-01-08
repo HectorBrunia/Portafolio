@@ -19,10 +19,7 @@ import {
 import { motion } from "framer-motion";
 const SobreMi = () => {
   return (
-    <motion.section
-      id="descripcion"
-      className=" text-white flex flex-col items-center"
-    >
+    <motion.div className=" text-white flex flex-col items-center">
       <h1>Sobre mi</h1>
       <p className="textoSimple mt-12 lg:w-[900px] ">
         Vivo en la ciudad de Tandil, Bs. As., Argentina. Mi carrera en la
@@ -124,7 +121,7 @@ const SobreMi = () => {
           <p className="iconP">FLUTTER</p>
         </motion.div>
       </div>
-    </motion.section>
+    </motion.div>
   );
 };
 
