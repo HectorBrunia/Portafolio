@@ -60,7 +60,7 @@ const Proyect = ({ proyecto }: Props) => {
               <a href={proyecto.link}>visitar sitio</a>
             </button>
             <a
-              href={proyecto.link}
+              href={proyecto.github}
               className="flex items-center bg-resaltado rounded-lg  px-4 py-2 hover:opacity-80"
             >
               <DiGithubFull
