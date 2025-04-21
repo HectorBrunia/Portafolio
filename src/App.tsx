@@ -1,10 +1,14 @@
 import NavBar from "./components/NavBar";
 import { motion } from "framer-motion";
 import ProyectList from "./components/ProyectList";
-import Estudios from "./components/Estudios";
+// import Estudios from "./components/Estudios";
 import SobreMi from "./components/SobreMi";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import Particulas from "./components/Particulas";
+import Timeline from "./components/TimeLine";
+import { estudios, experiencias } from "./utils/DataProyectos";
+import HorizontalTimeline from "./components/TimeLineEstudios";
 
 const icon = {
   hidden: {
@@ -19,8 +23,9 @@ const Home = () => {
   return (
     <>
       <div className="bg-home relative">
+        <Particulas />
         <NavBar></NavBar>
-        <section id="sobreMi">
+        <section id="sobreMi" className="z-20">
           <div className="flex flex-col  text-white mt-28 items-center justify-center">
             <motion.h1
               initial={{ y: -50, opacity: 0 }}
@@ -104,13 +109,20 @@ const Home = () => {
           <div className="disponible">
             <p className="text-white font-karla font-bold ">DISPONIBLE</p>
           </div>
+          <div className="max-w-3xl mx-auto p-6">
+            <h2 className="text-2xl text-white font-karla font-bold  mb-6">
+              Experiencia Laboral
+            </h2>
+            <Timeline items={experiencias} />
+          </div>
           <SobreMi />
         </section>
-        <section id="proyectos">
+        <section id="proyectos" className="z-20">
           <ProyectList />
         </section>
-        <section id="estudios" className="text-white max-w-[925px]">
-          <Estudios />
+        <section id="estudios" className="py-24 z-20">
+          <h1 className="">Educacion</h1>
+          <HorizontalTimeline items={estudios} />
         </section>
       </div>
     </>

@@ -1,76 +1,49 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("sobreMi");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section"); // Selecciona todas las secciones
+    const sections = document.querySelectorAll("section");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id); // Actualiza la sección activa al intersectarse
+            setActiveSection(entry.target.id);
           }
         });
       },
-      { threshold: 0.3 } // Ajusta el porcentaje de visibilidad requerido
+      { threshold: 0.3 }
     );
 
     sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect(); // Limpia el observer al desmontar
+    return () => observer.disconnect();
   }, []);
 
-  const variants = {
-    noselected: {
-      fontSize: "12px",
-    },
-    selected: {
-      color: "rgb(255 255 255)",
-      boxShadow: " 0 0 10px #fffcfc ",
-      background: "radial-gradient(circle, #696666, rgb(73, 72, 72) 70%)",
-      fontSize: "14px",
-    },
-  };
+  const navItems = [
+    { id: "sobreMi", label: "Sobre mí" },
+    { id: "proyectos", label: "Proyectos" },
+    { id: "estudios", label: "Estudios" },
+  ];
+
   return (
-    <nav className="z-30 bg-navBar bg-opacity-80 fixed text-grayText  border-red-950 border rounded-full px-6 p-2 mt-3">
-      <ul className="flex flex-row gap-10 ">
-        <li>
-          <motion.a
-            href="#sobreMi"
-            className={"rounded-full p-1"}
-            initial="noselected"
-            animate={activeSection === "sobreMi" ? "selected" : "noselected"}
-            transition={{ type: "spring", stiffness: 100, damping: 12 }}
-            variants={variants}
-          >
-            Sobre mi
-          </motion.a>
-        </li>
-        <li>
-          <motion.a
-            href="#proyectos"
-            initial="noselected"
-            animate={activeSection === "proyectos" ? "selected" : "noselected"}
-            transition={{ type: "spring", stiffness: 100 }}
-            variants={variants}
-            className={"rounded-full p-1"}
-          >
-            Proyectos
-          </motion.a>
-        </li>
-        <li>
-          <motion.a
-            href="#estudios"
-            initial="noselected"
-            animate={activeSection === "estudios" ? "selected" : "noselected"}
-            transition={{ type: "spring", stiffness: 100 }}
-            variants={variants}
-            className={"rounded-full p-1"}
-          >
-            Estudios
-          </motion.a>
-        </li>
+    <nav className="z-30 fixed top-4 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-md text-white border border-gray-600 rounded-full px-6 py-2 shadow-md">
+      <ul className="flex gap-6 text-lg font-medium">
+        {navItems.map((item) => (
+          <li key={item.id}>
+            <a
+              href={`#${item.id}`}
+              className={`px-3 py-1 rounded-full transition-all duration-200 ${
+                activeSection === item.id
+                  ? "bg-resaltado text-black shadow"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

@@ -26,16 +26,16 @@ const SobreMi = () => {
         programación empezó a los 16 años, cuando mi interés en el mundo de los
         videojuegos y la informática en general me llevó a elegir la
         especialidad de informática en la escuela secundaria
-        <b className="text-white"> N°2 "ING. FELIPE SENILLOSA" </b>, donde en
-        2020 me recibí de{" "}
-        <b className="text-white">
+        <b className="texto-resaltado"> N°2 "ING. FELIPE SENILLOSA" </b>, donde
+        en 2020 me recibí de{" "}
+        <b className="texto-resaltado">
           Técnico en informática personal y profesional{" "}
         </b>
         . Actualmente soy estudiante avanzado en la carrera de Tecnicatura
         Universitaria en Desarrollo de Aplicaciones Informáticas
-        <b className="text-white"> TUDAI </b> en la Universidad Nacional del
-        Centro de la Provincia de Buenos Aires{" "}
-        <b className="text-white"> UNICEN </b>.
+        <b className="texto-resaltado"> TUDAI </b> en la Universidad Nacional
+        del Centro de la Provincia de Buenos Aires{" "}
+        <b className="texto-resaltado"> UNICEN </b>.
       </p>
       <h2 className="text-4xl py-10">Mis avilidades</h2>
       <div className=" tecnologias  ">

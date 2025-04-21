@@ -33,9 +33,8 @@ export const proyectos = [
     descripcion:
       "Pagina web de venta de celulares utilizando angular con typescript y utilizando una api (MockAPI) para obtener los datos de los celulares.",
     tecnologias: ["Angular", "Typescript"],
-    github:
-      "https://stackblitz.com/edit/angular-ivy-yzmvuo?authuser=1&file=src%2Fapp%2Fphone-data.service.ts",
-    link: "https://github.com/HectorBrunia/Angular",
+    github: "https://github.com/HectorBrunia/Angular",
+    link: "https://stackblitz.com/edit/angular-ivy-yzmvuo?authuser=1&file=src%2Fapp%2Fphone-data.service.ts",
   },
   {
     id: 3,
@@ -61,5 +60,47 @@ export const proyectos = [
     ],
     github: "https://github.com/Sergio-Dannunzio/Tranquiliza360-PPS",
     link: "https://www.tranquiliza360.com.ar/",
+  },
+];
+
+export const experiencias = [
+  {
+    title: "Desarrollador Full Stack (Pasantía)",
+    company: "NOS USINA DE IDEAS",
+    date: "Oct 2024 – Mar 2025",
+    description:
+      "Pasantía profesional desarrollada en NOS USINA DE IDEAS, un consultorio de Neurorehabilitación Integral de Adultos, encolaboración con el laboratorio PLADEMA. El propósito principal fue diseñar y desarrollar una página web para Tranquiliza.360°, un producto destinado a mejorar la neurorehabilitación de personas mayores mediante experiencias inmersivas.",
+  },
+  {
+    title: "Desarrollador Full Stack (Freelance)",
+    company: "Ares Steel Frame",
+    date: "Feb 2025 – Abr 2025",
+    description:
+      "Proyecto freelance: Desarrollo completo del sitio web institucional para una empresa de construcción en steel framing.",
+  },
+];
+
+export const estudios = [
+  {
+    title: "Técnico en informática personal y profesional",
+    company: "EEST N° 2  ING. FELIPE SENILLOSA",
+    date: "mar. 2014 - dic. 2020",
+    description:
+      "durante mi estancia en la escuela secundaria Ing. Felipe Senillosa, desarrolle un interes por el gaming lo que me llevo a investigar y desarrollar habilidades en el área y elejir la especialidad de informática, donde encontre una pasion por la programación",
+  },
+  {
+    title: "Técnico universitario en desarrollo de aplicaciones informáticas",
+    company:
+      "Universidad Nacional del Centro de la Provincia de Buenos Aires “UNICEN”",
+    date: "2021 – 2025",
+    description:
+      "En mi formación académica he adquirido habilidades para desarrollar soluciones efectivas utilizando diversas tecnologías, una sólida capacidad para el trabajo en equipo y un entusiasmo constante por aprender y fortalecer mis conocimientos, siempre buscando aportar valor en cada proyecto",
+  },
+  {
+    title: "Curso React y Next.js: Aprende Frontend y Backend FullStack",
+    company: "Udemy",
+    date: "2024 - 2025",
+    description:
+      "Curso de React y Next.js, donde aprendi a desarrollar aplicaciones web completas utilizando estas tecnologías y diversar bibliotecas y servicios como firebase, tailwind, render, cludynari, entre otros.",
   },
 ];
