@@ -33,10 +33,6 @@
   text-shadow: 0 0 20px rgb(127 29 29);
 }
 
-.textoSimple {
-  @apply text-pretty  text-white;
-}
-
 h1 {
   @apply text-4xl font-semibold pt-10 text-white;
 }
@@ -119,7 +115,7 @@ h1 {
   opacity: 1;
 }
 .disponible {
-  @apply relative w-52  px-16 border-red-950 border-2 py-2 m-auto rounded-full;
+  @apply relative w-52 mt-16 px-16 border-red-950 border-2 py-2 m-auto rounded-full;
 }
 .disponible:before {
   position: absolute;

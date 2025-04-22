@@ -1,127 +1,136 @@
-import {
-  BiLogoFlutter,
-  BiLogoMongodb,
-  BiLogoPostgresql,
-  BiLogoSpringBoot,
-  BiLogoTailwindCss,
-  BiLogoTypescript,
-} from "react-icons/bi";
-import {
-  FaJava,
-  FaReact,
-  FaJs,
-  FaPhp,
-  FaCss3Alt,
-  FaHtml5,
-  FaAngular,
-  FaNodeJs,
-} from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+//
+import { SiGmail } from "react-icons/si";
+const icon = {
+  hidden: {
+    textShadow: "0 0 0 rgb(127 29 29)",
+  },
+  visible: {
+    textShadow: "0 0 30px rgb(127 29 29)",
+  },
+};
 const SobreMi = () => {
   return (
-    <motion.div className=" text-white flex flex-col items-center">
-      <h1>Sobre mi</h1>
-      <p className="textoSimple mt-12 lg:w-[900px] ">
-        Vivo en la ciudad de Tandil, Bs. As., Argentina. Mi carrera en la
-        programación empezó a los 16 años, cuando mi interés en el mundo de los
-        videojuegos y la informática en general me llevó a elegir la
-        especialidad de informática en la escuela secundaria
-        <b className="texto-resaltado"> N°2 "ING. FELIPE SENILLOSA" </b>, donde
-        en 2020 me recibí de{" "}
-        <b className="texto-resaltado">
-          Técnico en informática personal y profesional{" "}
-        </b>
-        . Actualmente soy estudiante avanzado en la carrera de Tecnicatura
-        Universitaria en Desarrollo de Aplicaciones Informáticas
-        <b className="texto-resaltado"> TUDAI </b> en la Universidad Nacional
-        del Centro de la Provincia de Buenos Aires{" "}
-        <b className="texto-resaltado"> UNICEN </b>.
-      </p>
-      <h2 className="text-4xl py-10">Mis avilidades</h2>
-      <div className=" tecnologias  ">
-        <p>Lenguajes de programacion</p>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaJava size={50} color="white" />
-          <p className="iconP">JAVA</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaJs size={50} color="yellow" />
-          <p className="iconP">JAVASCRIPT</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaPhp size={50} />
-          <p className="iconP">PHP</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoTypescript
-            size={60}
-            color="#1f7bc1"
-            className=" icono absolute bottom-6 "
-          />
-          <p className="iconP">TYPESCRIPT</p>
-        </motion.div>
+    <>
+      <div className="grid lg:grid-cols-3 grid-cols-1  gap-8 text-white max-w-[1280px] items-center justify-center">
+        <div className="col-span-1 mx-auto flex gap-0 flex-col mt-40">
+          <div className="w-48 h-48 rounded-full overflow-hidden mx-auto shadow-lg ">
+            <motion.img
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              className=" w-60 h-60 object-cover scale-150 "
+              src="images/avatar.png"
+              alt="yo"
+            />
+          </div>
+          <motion.h1
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-5xl font-bold"
+          >
+            Héctor Bruña
+          </motion.h1>
+          <motion.h1
+            variants={icon}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            className="text-3xl font-bold text-red-900 "
+          >
+            Desarrollador Full-Stack
+          </motion.h1>
+        </div>
+
+        <div className="col-span-2 lg:mt-40 px-4">
+          <p className="lg:text-left">
+            Soy desarrollador{" "}
+            <b className="font-extrabold  text-red-900">Full Stack </b>,
+            especializado en{" "}
+            <b className="font-extrabold text-red-900">
+              React, Java y Spring Boot.{" "}
+            </b>
+            . Me formé como{" "}
+            <b className="font-extrabold text-red-900">
+              {" "}
+              Técnico en Desarrollo de Aplicaciones Informáticas en la UNICEN
+              (Tandil, Argentina),{" "}
+            </b>{" "}
+            donde descubrí mi pasión por crear soluciones útiles y bien
+            estructuradas.<br></br> Disfruto enfrentar desafíos que combinan
+            lógica y diseño, y continuamente busco mejorar mis habilidades a
+            través de proyectos personales y experiencias prácticas en el
+            desarrollo de aplicaciones web modernas.
+          </p>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex gap-12 mt-12 items-center justify-center"
+          >
+            <motion.a
+              whileHover={{
+                scale: 1.2,
+                color: "rgb(127 29 29 )",
+                y: -10,
+              }}
+              className="flex items-center flex-col"
+              target="_blank"
+              href="https://github.com/HectorBrunia"
+            >
+              <FaGithub size={40} />
+              <p>GitHub</p>
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.2,
+                color: "rgb(127 29 29 )",
+                y: -10,
+              }}
+              className="flex items-center flex-col"
+              target="_blank"
+              href="https://www.linkedin.com/in/h%C3%A9ctor-bru%C3%B1a/"
+            >
+              <FaLinkedin size={40} />
+              <p>LinkedIn</p>
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.2,
+                color: "rgb(127 29 29 )",
+                y: -10,
+              }}
+              className="flex items-center flex-col"
+              target="_blank"
+              href="mailto:hectorbct.2002@gmail.com"
+            >
+              <SiGmail size={40} />
+              <p>Email</p>
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.2,
+                color: "rgb(127 29 29 )",
+                y: -10,
+              }}
+              className="flex items-center flex-col"
+              target="_blank"
+              href="pdf/HectorBruña.pdf"
+              download="HectorBruña.pdf"
+            >
+              <FaDownload size={40} />
+              <p>Descargar CV</p>
+            </motion.a>
+          </motion.div>
+          <div className="disponible mt-12">
+            <p className="text-white font-karla font-bold ">DISPONIBLE</p>
+          </div>
+        </div>
       </div>
-      <div className="tecnologias">
-        <p>tecnologias Frontend</p>
-        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
-          <FaReact size={50} color="#74C0FC" />
-          <p className="iconP">REACT</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaAngular size={50} color="#DD235B" />
-          <p className="iconP">ANGULAR</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaCss3Alt size={50} color="#0784e4" />
-          <p className="iconP">CSS</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaHtml5 size={50} color="#F16529" />
-          <p className="iconP">HTML</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoTailwindCss
-            size={60}
-            color="#1f7bc1"
-            className=" absolute bottom-6"
-          />
-          <p className="iconP">TAILWIND</p>
-        </motion.div>
-      </div>
-      <div className="tecnologias ">
-        <p>Frameworks Backend</p>
-        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
-          <BiLogoSpringBoot
-            size={60}
-            color="green"
-            className=" absolute bottom-6"
-          />
-          <p className="iconP">SPRINGBOOT</p>
-        </motion.div>
-        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
-          <FaNodeJs size={57} color="green" className=" absolute bottom-6" />
-          <p className="iconP">NODEJS</p>
-        </motion.div>
-      </div>
-      <div className="tecnologias ">
-        <p>Bases de datos</p>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoPostgresql size={60} className=" " />
-          <p className="iconP">POSTGRESQL</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoMongodb size={60} color="green" className=" " />
-          <p className="iconP">MONGODB</p>
-        </motion.div>
-      </div>
-      <div className="tecnologias  ">
-        <p>Frameworks Aplicaciones</p>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoFlutter size={50} color="#74C0FC" />
-          <p className="iconP">FLUTTER</p>
-        </motion.div>
-      </div>
-    </motion.div>
+    </>
   );
 };
 

@@ -22,12 +22,12 @@ export default function Timeline({ items }: TimelineProps) {
           return (
             <div
               key={index}
-              className={`flex flex-col md:flex-row items-center ${
+              className={`flex flex-col md:flex-row items-center z-10 ${
                 isLeft ? "md:flex-row-reverse text-left" : "text-right"
               }`}
             >
-              <div className="w-full md:w-1/2 px-4">
-                <div className="bg-black p-4 rounded-lg shadow-md border border-gray-200">
+              <div className=" px-4">
+                <div className="bg-black p-4 rounded-lg shadow-md border w-[340px] border-gray-200 ">
                   <h3 className="text-lg text-red-900 font-semibold">
                     {item.title}
                   </h3>

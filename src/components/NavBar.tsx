@@ -28,8 +28,8 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="z-30 fixed top-4 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-md text-white border border-gray-600 rounded-full px-6 py-2 shadow-md">
-      <ul className="flex gap-6 text-lg font-medium">
+    <nav className="z-30 w-3/4 xl:w-1/3 fixed top-4 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-md text-white border border-gray-600 rounded-full md:px-6 py-2 shadow-md">
+      <ul className="flex items-center justify-center gap-6 md:text-lg text-sm font-medium">
         {navItems.map((item) => (
           <li key={item.id}>
             <a
