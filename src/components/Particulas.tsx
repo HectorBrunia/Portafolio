@@ -1,20 +1,18 @@
 import "../index.css";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { Engine } from "tsparticles-engine";
 
 export default function Particulas() {
-  const particlesInit = async (main) => {
+  const particlesInit = async (main: Engine) => {
     await loadFull(main);
   };
-
-  const particlesLoaded = (container) => {};
 
   return (
     <div id="particles-js" className="z-10">
       <Particles
         id="tsparticles"
         init={particlesInit}
-        loaded={particlesLoaded}
         options={{
           fpsLimit: 120,
           interactivity: {

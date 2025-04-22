@@ -1,5 +1,3 @@
-import React from "react";
-
 type TimelineItem = {
   title: string;
   company: string;
