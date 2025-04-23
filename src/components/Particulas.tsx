@@ -17,33 +17,14 @@ export default function Particulas() {
           fpsLimit: 120,
           interactivity: {
             events: {
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
               resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 150,
-                duration: 0.4,
-              },
             },
           },
           particles: {
             color: {
               value: "#ffffff",
             },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 1,
-              width: 1,
-            },
+
             collisions: {
               enable: true,
             },
@@ -54,7 +35,7 @@ export default function Particulas() {
                 default: "bounce",
               },
               random: false,
-              speed: 1,
+              speed: 0.5,
               straight: false,
             },
             number: {
@@ -62,7 +43,7 @@ export default function Particulas() {
                 enable: true,
                 area: 800,
               },
-              value: 40,
+              value: 80,
             },
             opacity: {
               value: 1,
@@ -71,7 +52,7 @@ export default function Particulas() {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 3 },
+              value: { min: 0.5, max: 1 },
             },
           },
         }}

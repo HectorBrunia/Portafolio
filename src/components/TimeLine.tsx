@@ -33,7 +33,7 @@ export default function Timeline({ items }: TimelineProps) {
                   </h3>
                   <p className="text-sm text-white">{item.company}</p>
                   <p className="text-xs text-gray-400">{item.date}</p>
-                  <p className="mt-2 text-sm text-gray-700">
+                  <p className="mt-2 text-sm text-gray-300">
                     {item.description}
                   </p>
                 </div>

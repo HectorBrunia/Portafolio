@@ -15,88 +15,49 @@ import {
   FaNodeJs,
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
+const techIcons = [
+  { icon: <FaJava size={50} color="white" />, name: "JAVA" },
+  { icon: <FaJs size={50} color="yellow" />, name: "JAVASCRIPT" },
+  { icon: <BiLogoTypescript size={50} color="#1f7bc1" />, name: "TYPESCRIPT" },
+  { icon: <FaReact size={50} color="#74C0FC" />, name: "REACT" },
+  { icon: <FaCss3Alt size={50} color="#0784e4" />, name: "CSS" },
+  { icon: <FaHtml5 size={50} color="#F16529" />, name: "HTML" },
+  { icon: <BiLogoTailwindCss size={50} color="#1f7bc1" />, name: "TAILWIND" },
+  { icon: <BiLogoSpringBoot size={50} color="green" />, name: "SPRINGBOOT" },
+  { icon: <FaNodeJs size={50} color="green" />, name: "NODEJS" },
+  { icon: <BiLogoPostgresql size={50} />, name: "POSTGRESQL" },
+  { icon: <BiLogoMongodb size={50} color="green" />, name: "MONGODB" },
+  { icon: <BiLogoFlutter size={50} color="#74C0FC" />, name: "FLUTTER" },
+];
 const Avilidades = () => {
   return (
-    <motion.div className=" text-white flex flex-col items-center">
-      <h2 className="text-4xl py-10">Mis avilidades</h2>
-      <div className=" tecnologias  ">
-        <p>Lenguajes de programacion</p>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaJava size={50} color="white" />
-          <p className="iconP">JAVA</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaJs size={50} color="yellow" />
-          <p className="iconP">JAVASCRIPT</p>
-        </motion.div>
+    <div className="relative overflow-hidden w-full  py-10">
+      {/* Overlay de gradientes */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-1/4 bg-gradient-to-r from-[rgba(0,0,0,0.6)] to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-[rgba(0,0,0,0.6)] to-transparent z-10" />
 
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoTypescript
-            size={60}
-            color="#1f7bc1"
-            className=" icono absolute bottom-6 "
-          />
-          <p className="iconP">TYPESCRIPT</p>
-        </motion.div>
-      </div>
-      <div className="tecnologias">
-        <p>tecnologias Frontend</p>
-        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
-          <FaReact size={50} color="#74C0FC" />
-          <p className="iconP">REACT</p>
-        </motion.div>
-
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaCss3Alt size={50} color="#0784e4" />
-          <p className="iconP">CSS</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <FaHtml5 size={50} color="#F16529" />
-          <p className="iconP">HTML</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoTailwindCss
-            size={60}
-            color="#1f7bc1"
-            className=" absolute bottom-6"
-          />
-          <p className="iconP">TAILWIND</p>
-        </motion.div>
-      </div>
-      <div className="tecnologias ">
-        <p>Frameworks Backend</p>
-        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
-          <BiLogoSpringBoot
-            size={60}
-            color="green"
-            className=" absolute bottom-6"
-          />
-          <p className="iconP">SPRINGBOOT</p>
-        </motion.div>
-        <motion.div className="icon" whileHover={{ scale: 1.2 }}>
-          <FaNodeJs size={57} color="green" className=" absolute bottom-6" />
-          <p className="iconP">NODEJS</p>
-        </motion.div>
-      </div>
-      <div className="tecnologias ">
-        <p>Bases de datos</p>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoPostgresql size={60} className=" " />
-          <p className="iconP">POSTGRESQL</p>
-        </motion.div>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoMongodb size={60} color="green" className=" " />
-          <p className="iconP">MONGODB</p>
-        </motion.div>
-      </div>
-      <div className="tecnologias  ">
-        <p>Frameworks Aplicaciones</p>
-        <motion.div className=" icon  " whileHover={{ scale: 1.2 }}>
-          <BiLogoFlutter size={50} color="#74C0FC" />
-          <p className="iconP">FLUTTER</p>
-        </motion.div>
-      </div>
-    </motion.div>
+      {/* Slider animado */}
+      <motion.div
+        className="flex gap-16 w-max"
+        initial={{ x: 0 }}
+        animate={{ x: "-50%" }}
+        transition={{
+          duration: 20,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+      >
+        {[...techIcons, ...techIcons].map((tech, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center text-white min-w-[100px]"
+          >
+            {tech.icon}
+            <p className="mt-2 text-sm">{tech.name}</p>
+          </div>
+        ))}
+      </motion.div>
+    </div>
   );
 };
 

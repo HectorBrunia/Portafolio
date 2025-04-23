@@ -7,30 +7,78 @@
 
 .bg-home {
   @apply text-center flex flex-col items-center font-karla;
-  background: radial-gradient(circle, #373636, #000000 40%);
-  background-size: 300% 300%;
+  background: #000000;
+  background-size: 100% 100%;
   background-attachment: fixed;
-  animation: gradientBG 14s linear infinite;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
-@keyframes gradientBG {
+
+.bg-home::before,
+.bg-home::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(ellipse, #4b2424, transparent 70%);
+  filter: blur(60px);
+  opacity: 0.6;
+  z-index: -1;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.bg-home::before {
+  bottom: -15%;
+  left: -10%;
+  animation-name: floatNebula;
+}
+
+.bg-home::after {
+  top: -15%;
+  right: -10%;
+  animation-name: floatNebula2;
+}
+
+@keyframes floatNebula {
   0% {
-    background-position: 0% 100%;
-  }
-  25% {
-    background-position: 50% 120%;
+    transform: scale(1.5) translate(0, 0) rotate(0deg);
+    opacity: 0.5;
   }
   50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 50% 120%;
+    transform: scale(2) translate(40px, 60px) rotate(10deg);
+    opacity: 0.8;
   }
   100% {
-    background-position: 0% 100%;
+    transform: scale(4) translate(0px, 0px) rotate(10deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatNebula2 {
+  0% {
+    transform: scale(1.8) translate(0, 0) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(4.5) translate(-40px, -40px) rotate(-15deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.8) translate(0, 0) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+@media (max-width: 768px) {
+  .bg-home::before,
+  .bg-home::after {
+    display: none;
   }
 }
 .textShadow {
-  text-shadow: 0 0 20px rgb(127 29 29);
+  text-shadow: 0 0 20px rgb(127, 29, 29);
 }
 
 h1 {

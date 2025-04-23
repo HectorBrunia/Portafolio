@@ -19,13 +19,11 @@ const Home = () => {
         <section id="sobreMi" className="z-20">
           <SobreMi />
         </section>
+        <Avilidades />
         <h2 className="text-2xl text-white font-karla font-bold mt-20  mb-6">
           Experiencia Laboral
         </h2>
         <Timeline items={experiencias} />
-        <section>
-          <Avilidades />
-        </section>
         <section id="proyectos" className="z-20">
           <ProyectList />
         </section>
