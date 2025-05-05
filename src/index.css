@@ -44,15 +44,15 @@
 
 @keyframes floatNebula {
   0% {
-    transform: scale(1.5) translate(0, 0) rotate(0deg);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(2) translate(40px, 60px) rotate(10deg);
+    transform: scale(1.8) translate(0, 0) rotate(10deg);
     opacity: 0.8;
   }
+  50% {
+    transform: scale(4.5) translate(40px, 60px) rotate(-10deg);
+    opacity: 0.5;
+  }
   100% {
-    transform: scale(4) translate(0px, 0px) rotate(10deg);
+    transform: scale(1.8) translate(0px, 0px) rotate(10deg);
     opacity: 0.5;
   }
 }

@@ -38,8 +38,7 @@ export const proyectos = [
   },
   {
     id: 3,
-    nombre:
-      "Página para promocionar el producto Tranquiliza.360° desarrollado en PLADEMA ",
+    nombre: "Página Tranquiliza.360° desarrollado en PLADEMA ",
     img: [
       "images/tranqui_1.png",
       "images/tranquiliza_2.png",
@@ -58,6 +57,21 @@ export const proyectos = [
       "Javascript",
       "Nodejs",
     ],
+    github: "https://github.com/Sergio-Dannunzio/Tranquiliza360-PPS",
+    link: "https://www.tranquiliza360.com.ar/",
+  },
+  {
+    id: 4,
+    nombre: "Página Ares Steel Frame",
+    img: [
+      "images/ares_1.png",
+      "images/ares_2.png",
+      "images/ares_3.png",
+      "images/ares_4.png",
+    ],
+    descripcion:
+      "desarrolle una página web para la empresa Ares Steel Frame, una empresa de construcción en steel framing. La página cuenta con un diseño atractivo y moderno, dos formulario de contacto. La pagina fue desarrollada en React y Tailwind",
+    tecnologias: ["React", "Tailwind", "CSS", "Javascript", "Nodejs"],
     github: "https://github.com/Sergio-Dannunzio/Tranquiliza360-PPS",
     link: "https://www.tranquiliza360.com.ar/",
   },

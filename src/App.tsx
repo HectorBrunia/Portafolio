@@ -9,6 +9,7 @@ import Timeline from "./components/TimeLine";
 import { estudios, experiencias } from "./utils/DataProyectos";
 import HorizontalTimeline from "./components/TimeLineEstudios";
 import Avilidades from "./components/Avilidades";
+import FormContacto from "./components/FormContacto";
 
 const Home = () => {
   return (
@@ -30,6 +31,9 @@ const Home = () => {
         <section id="estudios" className="py-24 z-20">
           <h1 className="">Educacion</h1>
           <HorizontalTimeline items={estudios} />
+        </section>
+        <section>
+          <FormContacto />
         </section>
       </div>
     </>
