@@ -72,8 +72,8 @@ export const proyectos = [
     descripcion:
       "desarrolle una página web para la empresa Ares Steel Frame, una empresa de construcción en steel framing. La página cuenta con un diseño atractivo y moderno, dos formulario de contacto. La pagina fue desarrollada en React y Tailwind",
     tecnologias: ["React", "Tailwind", "CSS", "Javascript", "Nodejs"],
-    github: "https://github.com/Sergio-Dannunzio/Tranquiliza360-PPS",
-    link: "https://www.tranquiliza360.com.ar/",
+    github: "https://github.com/HectorBrunia/Ares-Steel-Frame",
+    link: "https://aressteelframe.com/",
   },
 ];
 

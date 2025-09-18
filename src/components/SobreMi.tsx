@@ -21,7 +21,7 @@ const SobreMi = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               className=" w-60 h-60 object-cover scale-150 "
-              src="images/avatar.png"
+              src="https://res.cloudinary.com/dtlrdlq98/image/upload/v1758229717/avatar_dferdr.png"
               alt="yo"
             />
           </div>
