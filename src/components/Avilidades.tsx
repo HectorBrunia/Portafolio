@@ -1,9 +1,7 @@
 import {
-  BiLogoFlutter,
   BiLogoMongodb,
   BiLogoPostgresql,
   BiLogoSpringBoot,
-  BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
 import {
@@ -12,7 +10,6 @@ import {
   FaJs,
   FaCss3Alt,
   FaHtml5,
-  FaNodeJs,
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
 const techIcons = [
@@ -22,12 +19,9 @@ const techIcons = [
   { icon: <FaReact size={50} color="#74C0FC" />, name: "REACT" },
   { icon: <FaCss3Alt size={50} color="#0784e4" />, name: "CSS" },
   { icon: <FaHtml5 size={50} color="#F16529" />, name: "HTML" },
-  { icon: <BiLogoTailwindCss size={50} color="#1f7bc1" />, name: "TAILWIND" },
   { icon: <BiLogoSpringBoot size={50} color="green" />, name: "SPRINGBOOT" },
-  { icon: <FaNodeJs size={50} color="green" />, name: "NODEJS" },
   { icon: <BiLogoPostgresql size={50} />, name: "POSTGRESQL" },
   { icon: <BiLogoMongodb size={50} color="green" />, name: "MONGODB" },
-  { icon: <BiLogoFlutter size={50} color="#74C0FC" />, name: "FLUTTER" },
 ];
 const Avilidades = () => {
   return (

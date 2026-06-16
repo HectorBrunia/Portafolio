@@ -67,7 +67,7 @@ export default function ContactForm() {
           onSubmit={sendEmail}
           className="flex flex-col gap-4 text-white"
         >
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col lg:flex-row gap-4">
             <input
               type="text"
               name="name"
